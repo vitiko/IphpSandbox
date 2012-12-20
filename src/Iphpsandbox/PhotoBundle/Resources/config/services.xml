@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!-- src/Iphpsandbox/PhotoBundle/Ressources/config/services.xml -->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="iphpsanbox.photo.admin.photo" class="Iphpsandbox\PhotoBundle\Admin\PhotoAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Фотографии" label="Фотографии"/>
+            <argument/>
+            <argument>Iphpsandbox\PhotoBundle\Entity\Photo</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+    </services>
+</container>

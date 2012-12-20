@@ -1,3 +1,7 @@
+iphpsandbox_photo:
+    resource: "@IphpsandboxPhotoBundle/Resources/config/routing.xml"
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
@@ -8,3 +12,8 @@ _main:
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+
+iphpsandbox_photo:
+    pattern:  /photo/
+    defaults: { _controller: IphpsandboxPhotoBundle:Photo:index }
