@@ -1,23 +1,27 @@
 {# src/Iphpsandbox/PhotoBundle/Resources/views/Photo/index.html.twig #}
-<h1>Фотографии</h1>
 
-<h2>Загруженные фотографии</h2>
 
+<h1>Uploaded photos</h1>
+<hr/>
+<div style="display: inline-block;">
 {% for photo in photos %}
-<div>
+<div style="float:left; margin-right: 20px">
 
     <h2>{{ photo.title }}</h2>
     <a href="{{ photo.photo.path }}" target="_blank"><img src="{{ photo.photo.path }}" {{ photo.photo.height > 150 ? 'height="150"':''}}/></a>
 
-<div>{{ photo.date | date ('Y.m.d') }}</div>
+<div>{{ photo.date | date ('Y.m.d') }}   | <a href="{{ path('iphpsandbox_photo_edit', {'id': photo.id}) }}">Edit</a></div>
 
 </div>
 {% endfor%}
+</div>
 
-<h2>Загрузить фото</h2>
+<h1>Upload new photo</h1>
+<hr/>
 
 <form action="./" enctype="multipart/form-data" method="post">
 
     {{ form_widget(uploadForm) }}
-    <input type="submit" value="Загрузить фото"/>
+    <input type="submit" value="Upload"/>
 </form>
+

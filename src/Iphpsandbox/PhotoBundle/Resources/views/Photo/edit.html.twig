@@ -1,0 +1,16 @@
+{# src/Iphpsandbox/PhotoBundle/Resources/views/Photo/index.html.twig #}
+
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+
+<h2>Редактировать фото</h2>
+
+<form action="{{ path('iphpsandbox_photo_edit', {'id': photo.id}) }}" enctype="multipart/form-data" method="post">
+
+    {{ form_widget(editForm) }}
+
+    <input type="submit" value="Редактировать фото"/>
+</form>
+{% endblock body %}

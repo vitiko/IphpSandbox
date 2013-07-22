@@ -17,3 +17,7 @@ fos_user_security:
 iphpsandbox_photo:
     pattern:  /photo/
     defaults: { _controller: IphpsandboxPhotoBundle:Photo:index }
+
+iphpsandbox_photo_edit:
+    pattern:  /photo/{id}/
+    defaults: { _controller: IphpsandboxPhotoBundle:Photo:edit }
