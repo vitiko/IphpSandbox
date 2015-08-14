@@ -10,11 +10,15 @@ class PhotoAdmin extends Admin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
-        return $listMapper->addIdentifier('title')->add ('date');
+        return $listMapper->addIdentifier('title')->add('date');
     }
 
     protected function configureFormFields(FormMapper $formMapper)
     {
-        return $formMapper->add('title')->add ('date')->add('photo', 'iphp_file');
+        return $formMapper->add('title')
+             ->add('date')
+            ->add('photo', 'iphp_file')
+            ->add('imageUpload', 'file', array ('required' => false))
+            ->add ('image','genemu_plain');
     }
 }

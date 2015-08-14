@@ -31,6 +31,16 @@ class Photo
      **/
     private $photo;
 
+
+
+    /**
+     * @Assert\File( maxSize="20M")
+     * @FileStore\UploadableField(mapping="image", filedata_property="image")
+     **/
+    private $imageUpload;
+
+    private $image;
+
     /**
      * @return integer 
      */
@@ -91,4 +101,42 @@ class Photo
     {
         return $this->date;
     }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $imageUpload
+     */
+    public function setImageUpload($imageUpload)
+    {
+        $this->imageUpload = $imageUpload;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageUpload()
+    {
+        return $this->imageUpload;
+    }
+
+
+
+
 }

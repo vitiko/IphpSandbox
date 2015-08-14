@@ -10,5 +10,8 @@
         <field name="title" type="string" column="title" length="255"/>
         <field name="date" type="datetime" column="date"/>
         <field name="photo" type="array" column="photo"/>
+
+
+        <field name="image" type="array" column="image"/>
    </entity>
 </doctrine-mapping>

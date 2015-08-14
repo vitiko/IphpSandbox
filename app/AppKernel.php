@@ -10,7 +10,8 @@ class AppKernel extends IphpKernel
     public function addBundles()
     {
         return array (
-            new \Iphpsandbox\PhotoBundle\IphpsandboxPhotoBundle()
+            new \Iphpsandbox\PhotoBundle\IphpsandboxPhotoBundle(),
+           // new \Sonata\CoreBundle\SonataCoreBundle()
         );
     }
 

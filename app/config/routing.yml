@@ -1,17 +1,9 @@
-iphpsandbox_photo:
-    resource: "@IphpsandboxPhotoBundle/Resources/config/routing.xml"
-    prefix:   /
-
-# Internal routing configuration to handle ESI
-#_internal:
-#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
-#    prefix:   /_internal
-
+#load routes from database storing by IphpCoreBundle
 _main:
     resource: "@IphpCoreBundle/Resources/config/routing.yml"
 
-fos_user_security:
-    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+fos_user_all:
+    resource: "@IphpCoreBundle/Resources/config/routing/fos_user.yml"
 
 
 iphpsandbox_photo:
